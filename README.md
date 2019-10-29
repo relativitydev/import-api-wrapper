@@ -1,2 +1,4 @@
 # import-api-wrapper
-This is a simple wrapper around the ImportAPI
+Open Source Community:
+
+While this is an open source project on the Relativity GitHub account, support is only available through the Relativity developer community. You are welcome to use the code and solution as you see fit within the confines of the license it is released under. However, if you are looking for support or modifications to the solution, we suggest reaching out to a Relativity Development Partner.
