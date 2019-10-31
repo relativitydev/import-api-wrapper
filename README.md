@@ -8,7 +8,7 @@ The solution consists of five projects: ImportPluginConsole, Relativity.DataExch
 
 Set the nexcessary properties and run the application. The application will upload an image and a native to the targeted workspace.
 
-# ImportConnectionInfo:
+# ImportConnectionInfo
 
 Set the properties to your environment in the ImportConnectionInfo object located in Program.CS
 
@@ -19,5 +19,5 @@ These include:
 	WebServiceUrl 
 	WorkspaceId 
   
- # Configuring the Legacy Wrapper:
- Add the appropriate versioned assemblies from your MSI SDK Import API folder to the legacy wrapper references.
+ # Configuring the Legacy Wrapper
+ Add the appropriate versioned assemblies from your MSI SDK Import API folder to the Relativity.DataExchange.Wrapper.Legacy references.
