@@ -6,7 +6,7 @@ While this is an open source project on the Relativity GitHub account, support i
 # usage
 The solution consists of five projects: ImportPluginConsole, Relativity.DataExchange.Wrapper.Core, Relativity.DataExchange.Wrapper.Legacy, Relativity.DataExchange.Wrapper.Sdk, Relativity.DataExchange.Wrapper.Shared
 
-Set the nexcessary properties and run the application. The application will upload an image and a native to the targeted workspace.
+Set the necessary properties and run the application. The application will upload an image and a native to the targeted workspace.
 
 # ImportConnectionInfo
 
