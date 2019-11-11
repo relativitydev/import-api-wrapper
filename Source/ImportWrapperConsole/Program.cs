@@ -9,10 +9,10 @@
 	using System.Net.Http;
 	using System.Text;
 
-
-	class Program
+	public class Program
 	{
-		static void Main(string[] args)
+		[STAThread]
+		public static void Main(string[] args)
 		{
 			try
 			{
@@ -24,7 +24,8 @@
 				Console.WriteLine(e);
 			}
 
-			Console.WriteLine("CONSOLE - Terminating.");
+			Console.WriteLine("CONSOLE - Press any key to exit.");
+			Console.ReadKey();
 		}
 
 		private static void ExecuteDemo()
@@ -35,6 +36,7 @@
 			string legacyPluginDirectory = System.IO.Path.Combine(rootSolutionDirectory, @"Plugins\Legacy");
 			string sdkPluginDirectory = System.IO.Path.Combine(rootSolutionDirectory, @"Plugins\Sdk");
 			Version MinSdkVersion = new Version(9, 7, 229, 5);
+
 			// Note: the legacy API does NOT support bearer token auth!
 			ImportConnectionInfo connectionInfo = new ImportConnectionInfo
 			{
@@ -44,6 +46,7 @@
 				WebServiceUrl = "https://HOSTNAME/RelativityWebApi/",
 				WorkspaceId = 1234567
 			};
+
 			// Note: specify the full path where each plugin directory is located.
 			PluginConfiguration pluginConfiguration = new PluginConfiguration
 			{
@@ -72,6 +75,7 @@
 			context.Progress += (sender, e) => { Console.WriteLine("[Progress Event] Row number: {0}", e.Row); };
 			context.ProcessProgress += (sender, e) => { Console.WriteLine("[Progress Process Event] Total processed records: {0}", e.TotalRecordsProcessed); };
 
+			// Ensure all plugin related resources are disposed once the import has completed.
 			using (ImportClientPluginFactory pluginFactory = new ImportClientPluginFactory(pluginConfiguration))
 			{
 				// Automatically pulls the RelativityVersion for the environment supplied in connectionInfo object
@@ -83,23 +87,16 @@
 					IImportClient client = pluginFactory.CreateImportClient(relativityVersion, connectionInfo, context);
 					ImportNativeDocs(client, datasetDirectory);
 					ImportImages(client, datasetDirectory);
-					if (relativityVersion >= MinSdkVersion)
-					{
-						Console.WriteLine("CONSOLE - SDK Import Completed.");
-					}
-					else
-					{
-						Console.WriteLine("CONSOLE - Legacy Import Completed.");
-					}
+					Console.WriteLine(relativityVersion >= MinSdkVersion
+						? "CONSOLE - SDK Import Completed."
+						: "CONSOLE - Legacy Import Completed.");
 				}
 				catch (Exception e)
 				{
 					Console.WriteLine(e);
 				}
-
 			}
 		}
-
 
 		private static void ImportNativeDocs(IImportClient client, string datasetDirectory)
 		{
@@ -206,7 +203,6 @@
 			return $"REL-{fileName.ToUpperInvariant()}-{Guid.NewGuid()}";
 		}
 
-
 		private static Version RetrieveRelativityVersion(ImportConnectionInfo connectionInfo)
 		{
 			try
@@ -229,8 +225,6 @@
 				Console.WriteLine(e);
 				throw;
 			}
-
 		}
-
 	}
 }
