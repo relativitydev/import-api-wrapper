@@ -328,3 +328,6 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+# Exclude the folder where all plugin assemblies and binaries are copied.
+/Source/Plugins/
