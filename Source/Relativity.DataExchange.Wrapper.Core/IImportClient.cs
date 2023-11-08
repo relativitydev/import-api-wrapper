@@ -1,4 +1,4 @@
-﻿namespace Relativity.DataExchange.Wrapper
+﻿namespace Relativity.Server.DataExchange.Wrapper
 {
 	/// <summary>
 	/// Represents an abstract client to create supported bulk artifact import jobs.

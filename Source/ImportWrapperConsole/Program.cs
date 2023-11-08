@@ -1,6 +1,6 @@
-﻿namespace ImportPluginConsole
+﻿namespace RelativityServerImportPluginConsole
 {
-	using Relativity.DataExchange.Wrapper;
+	using Relativity.Server.DataExchange.Wrapper;
 	using System;
 	using System.Collections.Generic;
 	using System.Data;
@@ -40,11 +40,11 @@
 			// Note: the legacy API does NOT support bearer token auth!
 			ImportConnectionInfo connectionInfo = new ImportConnectionInfo
 			{
-				Password = "PASSWORD",
-				UserName = "USERNAME",
+				Password = "Test1234!",
+				UserName = "relativity.admin@kcura.com",
 				UseRsaBearerToken = false,
-				WebServiceUrl = "https://HOSTNAME/RelativityWebApi/",
-				WorkspaceId = 1234567
+				WebServiceUrl = "https://P-DV-VM-SEW1TIE/RelativityWebApi/",
+				WorkspaceId = 1018580
 			};
 
 			// Note: specify the full path where each plugin directory is located.

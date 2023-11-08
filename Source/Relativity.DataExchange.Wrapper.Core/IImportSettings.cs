@@ -1,4 +1,4 @@
-﻿namespace Relativity.DataExchange.Wrapper
+﻿namespace Relativity.Server.DataExchange.Wrapper
 {
 	using System.Collections.Generic;
 	using System.Text;

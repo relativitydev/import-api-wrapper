@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{79BCA10B-9A9D-4129-B9F9-A3C99E5240E8}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ImportPluginConsole</RootNamespace>
-    <AssemblyName>ImportPluginConsole</AssemblyName>
+    <RootNamespace>RelativityServerImportPluginConsole</RootNamespace>
+    <AssemblyName>RelativityServerImportPluginConsole</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>RelativityServerImportPluginConsole.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Relativity.DataExchange.Wrapper.Core\Relativity.DataExchange.Wrapper.Core.csproj">
+    <ProjectReference Include="..\Relativity.DataExchange.Wrapper.Core\Relativity.Server.DataExchange.Wrapper.Core.csproj">
       <Project>{830b3fe2-1ef4-4aba-8a02-a15a0fadae51}</Project>
-      <Name>Relativity.DataExchange.Wrapper.Core</Name>
+      <Name>Relativity.Server.DataExchange.Wrapper.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
