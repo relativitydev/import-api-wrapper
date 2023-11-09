@@ -1,4 +1,4 @@
-﻿namespace Relativity.DataExchange.Wrapper
+﻿namespace Relativity.Server.DataExchange.Wrapper
 {
 	/// <summary>
 	/// Represents document and object import settings.

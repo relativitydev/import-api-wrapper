@@ -101,16 +101,12 @@
     <Reference Include="Relativity.DataTransfer.MessageService, Version=1.0.21.3, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Relativity.Import.Client.9.7.229.5\lib\net462\Relativity.DataTransfer.MessageService.dll</HintPath>
     </Reference>
-    <Reference Include="Relativity.Kepler, Version=1.0.1.445, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Relativity.ObjectManager.9.7.229.5\lib\net462\Relativity.Kepler.dll</HintPath>
+    <Reference Include="Relativity.Logging, Version=3000.4.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Relativity.Server.Logging.SDK.3000.4.4\lib\net462\Relativity.Logging.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Relativity.Logging, Version=9.4.317.6, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Relativity.Logging.9.4.317\lib\net462\Relativity.Logging.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Relativity.Logging.Interfaces, Version=9.4.317.6, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Relativity.Logging.9.4.317\lib\net462\Relativity.Logging.Interfaces.dll</HintPath>
+    <Reference Include="Relativity.Logging.Interfaces, Version=3000.4.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Relativity.Server.Logging.Interfaces.SDK.3000.4.4\lib\net462\Relativity.Logging.Interfaces.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Relativity.OAuth2Client, Version=1.0.27.2, Culture=neutral, processorArchitecture=MSIL">
@@ -133,33 +129,17 @@
       <HintPath>..\packages\Relativity.OAuth2.Client.1.0.27\lib\net462\Relativity.OAuth2Client.Interfaces.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Relativity.Services.DataContracts, Version=9.7.229.5, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Relativity.ObjectManager.9.7.229.5\lib\net462\Relativity.Services.DataContracts.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Relativity.Services.Interfaces, Version=9.7.229.5, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Relativity.ObjectManager.9.7.229.5\lib\net462\Relativity.Services.Interfaces.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Relativity.Services.ServiceProxy, Version=1.0.1.445, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Relativity.ObjectManager.9.7.229.5\lib\net462\Relativity.Services.ServiceProxy.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Relativity.Telemetry.APM, Version=9.4.164.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Relativity.Telemetry.Client.9.4.164\lib\net462\Relativity.Telemetry.APM.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Relativity.Telemetry.DataContracts.Shared, Version=9.4.164.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Relativity.Telemetry.Client.9.4.164\lib\net462\Relativity.Telemetry.DataContracts.Shared.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Relativity.Telemetry.MetricsCollection, Version=9.4.164.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Relativity.Telemetry.Client.9.4.164\lib\net462\Relativity.Telemetry.MetricsCollection.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Relativity.Telemetry.MetricsCollection.Interface, Version=9.4.164.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Relativity.Telemetry.Client.9.4.164\lib\net462\Relativity.Telemetry.MetricsCollection.Interface.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Relativity.Transfer.Client, Version=5.0.2.35, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\relativity.transfer.client.5.0.2\lib\net462\Relativity.Transfer.Client.dll</HintPath>
@@ -220,9 +200,9 @@
     <Content Include="oi\unmanaged\wvcore-R1.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Relativity.DataExchange.Wrapper.Core\Relativity.DataExchange.Wrapper.Core.csproj">
+    <ProjectReference Include="..\Relativity.DataExchange.Wrapper.Core\Relativity.Server.DataExchange.Wrapper.Core.csproj">
       <Project>{830b3fe2-1ef4-4aba-8a02-a15a0fadae51}</Project>
-      <Name>Relativity.DataExchange.Wrapper.Core</Name>
+      <Name>Relativity.Server.DataExchange.Wrapper.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="..\Relativity.DataExchange.Wrapper.Shared\Relativity.DataExchange.Wrapper.Shared.projitems" Label="Shared" />
